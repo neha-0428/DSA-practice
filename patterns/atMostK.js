@@ -39,4 +39,4 @@ function atMostK(str, k) {
 
 }
 
-console.log(atMostK("eceba", 2))
+console.log(atMostK("ecceba", 3))
