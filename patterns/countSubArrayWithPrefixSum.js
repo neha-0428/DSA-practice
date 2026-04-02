@@ -8,11 +8,9 @@ function count(arr, k) {
 
     for(let num of arr) {
         sum += num;
-        console.log(sum, 'sum')
 
         if(map[sum - k]) {
             count += map[sum - k]
-            console.log(sum - k, map, count)
         }
 
         map[sum] = (map[sum] || 0) + 1
@@ -23,5 +21,5 @@ function count(arr, k) {
 
 }
 
-// console.log(count([1, 2, 3], 3))
+console.log(count([1, 2, 3], 3))
 console.log(count([4, 2, 5], 4))
