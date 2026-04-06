@@ -9,18 +9,17 @@ function minSize(arr, target) {
     for(let right = 0; right < arr.length; right++) {
         windowSum += arr[right];
 
-        while(windowSum > target) {
+        while(windowSum >= target) {
+            minLen = Math.min(minLen, right - left + 1)
             windowSum -= arr[left]
             left++
         }
-
-        if(windowSum === target) {
-            minLen = Math.min(minLen, right - left + 1)
-        }
     }
 
-    return minLen
+    return minLen === Infinity ? 0 : minLen;
 }
 
 let arr = [2, 3, 1, 2, 4, 3]
+let arr2 = [2, 7, 1, 4, 3]
 console.log(minSize(arr, 7))
+console.log(minSize(arr2, 7))

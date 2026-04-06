@@ -1,9 +1,11 @@
 // Problem: Find the maximum sum of any contiguous subarray of size k.
 
 function maxSum(arr, k) {
+    if (k > arr.length) return null;
+    
     let left = 0;
     let windowSum = 0;
-    let maxSum = 0;
+    let maxSum = -Infinity; // for negative numbers
 
     for(let right = 0; right < k; right++) {
         windowSum += arr[right]

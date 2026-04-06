@@ -2,6 +2,7 @@
 
 // this is classic circular sliding window
 
+
 function replace(arr, k) {
     let left = 1;
     let result = []
