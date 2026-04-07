@@ -6,26 +6,15 @@ function moveZero(arr) {
 
     for(let right = 0; right < arr.length; right++) {
 
-
-        // This too is correct but we have a much cleaner solution
-        // if(arr[right] !== 0) {
-        //     let temp = arr[right]
-        //     arr[right] = arr[left]
-        //     arr[left] = temp
-        //     left++
-        // }
-
         if(arr[right] !== 0) {
+            let temp = arr[left]
             arr[left] = arr[right]
+            arr[right] = temp
             left++
         }
     }
 
-    for(let i = left; i < arr.length; i++) {
-        arr[i] = 0
-    }
-
-    return arr
+    return arr;
 
 }
 
