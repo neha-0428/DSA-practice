@@ -13,7 +13,8 @@ function uniqueCount(arr) {
         }
     }
 
-    return left+1;
+    arr.length = left + 1;
+    return [left+1, arr];
 
 }
 
