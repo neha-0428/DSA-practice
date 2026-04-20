@@ -5,13 +5,11 @@
 function shiftZeros(arr) {
     let left = 0
 
-    for(let right = 1; right < arr.length; right++) {
+    for(let right = 0; right < arr.length; right++) {
 
-        if(arr[right] !== 0 && arr[left] === 0) {
-            arr[left] = arr[right]
-            arr[right] = 0
-            left++
-        } else if (arr[left] !== 0){
+        // if right !== 0, then left too will !== 0 so both move together if right !== 0
+        if(arr[right] !== 0) {
+            [arr[left], arr[right]] = [arr[right], arr[left]]
             left++
         }
     }
